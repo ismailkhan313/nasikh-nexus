@@ -1,0 +1,3 @@
+This folder essentially holds utility scripts for whisper.cpp for use on my macbook m1 pro.
+
+More to come...

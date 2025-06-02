@@ -4,11 +4,13 @@
 import subprocess
 import os
 from pathlib import Path # For easier path manipulation
+import uuid # For generating random folder names
 
 # --- Configuration ---
 whisper_cpp_executable = "/Users/viz1er/Codebase/whisper.cpp/main"
 model_path = "/Users/viz1er/Codebase/whisper.cpp/models/ggml-large-v3-turbo.bin"
-base_transcripts_parent_dir = Path("/Users/viz1er/Codebase/obsidian-vault/01 - Fleeting Notes/Transcriptions")
+# Updated base directory for transcriptions
+base_transcripts_parent_dir = Path("/Users/viz1er/Codebase/obsidian-vault/05 - Projects/FlowScribe/Transcriptions")
 
 # --- Thread and Processor Configuration ---
 num_threads = "8"
@@ -37,12 +39,16 @@ def main():
         print(f"Error: Input folder not found or is not a directory: {input_folder_path}")
         return
 
-    # --- Create a new subfolder for this specific batch run ---
-    # The subfolder will be named after the input folder
-    current_batch_output_dir = base_transcripts_parent_dir / input_folder_path.name
+    # --- Create a new uniquely named subfolder for this specific batch run ---
+    random_folder_name = uuid.uuid4().hex # Generate a random hexadecimal string
+    current_batch_output_dir = base_transcripts_parent_dir / random_folder_name
     try:
-        current_batch_output_dir.mkdir(parents=True, exist_ok=True)
+        current_batch_output_dir.mkdir(parents=True, exist_ok=False) # exist_ok=False to ensure it's a new folder
         print(f"Transcripts for this batch will be saved in: {current_batch_output_dir}")
+    except FileExistsError:
+        # Extremely unlikely with UUID, but good practice
+        print(f"Error: Output directory '{current_batch_output_dir}' already exists. Please try again.")
+        return
     except OSError as e:
         print(f"Error: Could not create specific batch output directory '{current_batch_output_dir}': {e}")
         return
@@ -96,7 +102,10 @@ def main():
 
         try:
             # Use subprocess.run with the full command
-            process = subprocess.run(full_command, check=True, text=True)
+            process = subprocess.run(full_command, check=True, text=True, capture_output=True) # capture_output to see stdout/stderr if needed
+            # print(f"whisper.cpp stdout:\n{process.stdout}") # Uncomment for debugging whisper output
+            # if process.stderr: # Uncomment for debugging whisper errors
+            #     print(f"whisper.cpp stderr:\n{process.stderr}")
             print("-" * 30)
             print(f"Transcription successful for: {input_wav_file_path.name}")
             print(f"Transcription saved to: {output_file_base}.txt")
@@ -107,6 +116,8 @@ def main():
             print("-" * 30)
             print(f"Error during transcription for file: {input_wav_file_path.name}")
             print(f"Return code: {e.returncode}")
+            print(f"whisper.cpp stdout:\n{e.stdout}")
+            print(f"whisper.cpp stderr:\n{e.stderr}")
             print("Error messages from whisper.cpp should have been printed above.")
         except FileNotFoundError:
             error_count += 1

@@ -8,7 +8,7 @@ from pathlib import Path # For easier path manipulation
 # --- Configuration ---
 whisper_cpp_executable = "/Users/viz1er/Codebase/whisper.cpp/main"
 model_path = "/Users/viz1er/Codebase/whisper.cpp/models/ggml-large-v3-turbo.bin" # Assuming this model path is correct now
-output_transcripts_dir = Path("/Users/viz1er/Codebase/obsidian-vault/01 - Fleeting Notes/Transcriptions")
+output_transcripts_dir = Path("/Users/viz1er/Codebase/obsidian-vault/05 - Projects/FlowScribe/Transcriptions")
 
 # --- NEW: Thread and Processor Configuration ---
 num_threads = "8"  

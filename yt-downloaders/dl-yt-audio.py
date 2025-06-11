@@ -8,7 +8,7 @@ from pathlib import Path # For easier path manipulation
 
 # --- Configuration ---
 # Name of the file containing your YouTube video URLs, one per line.
-YOUTUBE_URLS_FILE = 'youtube_urls.txt'
+YOUTUBE_URLS_FILE = 'youtube-urls.txt'
 
 # Base parent directory where batch-specific subfolders will be created.
 BASE_OUTPUT_PARENT_DIR = Path('/Users/viz1er/Documents/audio-lectures')

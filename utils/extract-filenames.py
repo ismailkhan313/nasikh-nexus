@@ -2,49 +2,46 @@
 # flake8: noqa
 
 import os
+import argparse
+from config import OUTPUT_PATH_TITLES_FILE, ensure_parent_dir_exists
 
-def list_files_to_txt(folder_path, output_file_path):
+def list_files_to_txt(source_directory, output_file):
     """
-    Lists all file names from a given folder and stores them in a .txt file.
+    Scans a source directory, extracts the base filenames (without extension),
+    and saves them to a specified output text file.
+    """
+    if not os.path.isdir(source_directory):
+        print(f"❌ Error: The source directory '{source_directory}' does not exist.")
+        return
 
-    Args:
-        folder_path (str): The path to the folder to scan.
-        output_file_path (str): The full path to the output .txt file.
-    """
     try:
-        if not os.path.isdir(folder_path):
-            print(f"Error: The folder '{folder_path}' was not found or is not a directory.")
-            return
+        ensure_parent_dir_exists(output_file)
+        all_entries = os.listdir(source_directory)
+        file_names = sorted([f for f in all_entries if os.path.isfile(os.path.join(source_directory, f))])
 
-        # Ensure the output directory exists
-        output_dir = os.path.dirname(output_file_path)
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-            print(f"Created directory: {output_dir}")
+        with open(output_file, 'w', encoding='utf-8') as f:
+            for name in file_names:
+                f.write(os.path.splitext(name)[0] + '\n')
 
-        # Get file names from the given folder
-        # os.listdir() gives all entries, os.path.isfile() filters for files
-        all_entries = os.listdir(folder_path)
-        file_names = [f for f in all_entries if os.path.isfile(os.path.join(folder_path, f))]
-
-        # Write file names to the output text file
-        with open(output_file_path, 'w') as f:
-            for name in sorted(file_names): # Optional: sort the names
-                f.write(name + '\n')
-        
-        print(f"Successfully saved {len(file_names)} file names to {output_file_path}")
+        # Use the consistent success message format
+        print(f"✅ Created: {os.path.basename(output_file)} with {len(file_names)} titles.")
 
     except Exception as e:
-        print(f"An error occurred: {e}")
+        # Use the consistent error message format
+        print(f"❌ Error writing to file {output_file}: {e}")
 
 if __name__ == "__main__":
-    # Ask for the folder path via a terminal prompt
-    folder_path_input = input("Please enter the path to the folder whose file names you want to list: ")
+    parser = argparse.ArgumentParser(
+        description="Scan a source directory and save its filenames to the configured titles file.",
+        formatter_class=argparse.RawTextHelpFormatter
+    )
+    parser.add_argument(
+        "source_directory",
+        help="The full path to the folder containing the source files."
+    )
+    args = parser.parse_args()
+
+    print(f"➡️ Reading from: {args.source_directory}")
+    print(f"➡️ Writing titles to:   {OUTPUT_PATH_TITLES_FILE}\n")
     
-    # Fixed output file path as per your request
-    fixed_output_file = "/Users/viz1er/Codebase/FlowScribe/utils/lesson-titles.txt"
-    
-    if folder_path_input:
-        list_files_to_txt(folder_path_input.strip(), fixed_output_file)
-    else:
-        print("No folder path was provided. Exiting.")
+    list_files_to_txt(args.source_directory, OUTPUT_PATH_TITLES_FILE)

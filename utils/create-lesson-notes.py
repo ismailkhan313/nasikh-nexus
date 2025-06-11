@@ -21,8 +21,8 @@ def create_markdown_files(output_directory, lesson_titles_list):
     frontmatter = """---
 created: 2025-06-11
 tags:
-  - literature-note/islamic-text/ghazali-minhaj-alabidin
-  - islam/sufism
+  - literature-note/course/seekersguidance/kharida-albahiyya
+  - islam/theology/ashari
 ---
 
 """

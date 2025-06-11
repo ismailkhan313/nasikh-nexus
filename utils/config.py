@@ -6,11 +6,11 @@
 import os
 
 # --- Path 1: Output for Final Markdown Notes ---
-OUTPUT_PATH_MARKDOWN = "/Users/viz1er/Codebase/obsidian-vault/02 - Literature Notes/Video Lectures/Minhaj al-Abideen Sulayman Van Ael"
+OUTPUT_PATH_MARKDOWN = "/Users/viz1er/Codebase/obsidian-vault/02 - Literature Notes/SeekersGuidance/Islamic Studies/Level 1/Dardir’s Kharida al-Bahiyya"
 # --- Path 2: Output for the Intermediate Titles File ---
 OUTPUT_PATH_TITLES_FILE = "/Users/viz1er/Codebase/FlowScribe/utils/lesson-titles.txt"
 # --- Path 3: Directory for .txt Files to be Renamed ---
-PATH_FOR_RENAME = "/Users/viz1er/Codebase/obsidian-vault/02 - Literature Notes/Video Lectures/Minhaj al-Abideen Sulayman Van Ael/transcripts"
+PATH_FOR_RENAME = "/Users/viz1er/Codebase/obsidian-vault/02 - Literature Notes/SeekersGuidance/Islamic Studies/Level 1/Dardir’s Kharida al-Bahiyya/transcripts"
 
 
 # --- DO NOT EDIT BELOW THIS LINE ---

@@ -4,25 +4,25 @@
 import subprocess
 import os
 from pathlib import Path # For easier path manipulation
-import uuid # For generating random folder names
+# uuid is no longer needed as we are not creating random folder names
 
 # --- Configuration ---
 whisper_cpp_executable = "/Users/viz1er/Codebase/whisper.cpp/main"
 model_path = "/Users/viz1er/Codebase/whisper.cpp/models/ggml-large-v3-turbo.bin"
-# Updated base directory for transcriptions
-base_transcripts_parent_dir = Path("/Users/viz1er/Codebase/obsidian-vault/05 - Projects/FlowScribe/Transcriptions")
+# This is now the single, consistent directory for all transcripts
+transcripts_output_dir = Path("/Users/viz1er/Codebase/obsidian-vault/05 - Projects/FlowScribe/Transcriptions/Completed")
 
 # --- Thread and Processor Configuration ---
 num_threads = "8"
 num_processors = "2"
 
 def main():
-    # --- Ensure the PARENT output directory exists ---
+    # --- Ensure the single, consistent output directory exists ---
     try:
-        base_transcripts_parent_dir.mkdir(parents=True, exist_ok=True)
-        print(f"Base directory for all transcript batches: {base_transcripts_parent_dir}")
+        transcripts_output_dir.mkdir(parents=True, exist_ok=True)
+        print(f"Transcripts will be saved in: {transcripts_output_dir}")
     except OSError as e:
-        print(f"Error: Could not create base output directory '{base_transcripts_parent_dir}': {e}")
+        print(f"Error: Could not create output directory '{transcripts_output_dir}': {e}")
         return
 
     # --- Get input FOLDER from user ---
@@ -39,20 +39,6 @@ def main():
         print(f"Error: Input folder not found or is not a directory: {input_folder_path}")
         return
 
-    # --- Create a new uniquely named subfolder for this specific batch run ---
-    random_folder_name = uuid.uuid4().hex # Generate a random hexadecimal string
-    current_batch_output_dir = base_transcripts_parent_dir / random_folder_name
-    try:
-        current_batch_output_dir.mkdir(parents=True, exist_ok=False) # exist_ok=False to ensure it's a new folder
-        print(f"Transcripts for this batch will be saved in: {current_batch_output_dir}")
-    except FileExistsError:
-        # Extremely unlikely with UUID, but good practice
-        print(f"Error: Output directory '{current_batch_output_dir}' already exists. Please try again.")
-        return
-    except OSError as e:
-        print(f"Error: Could not create specific batch output directory '{current_batch_output_dir}': {e}")
-        return
-
     # --- Find WAV files in the folder ---
     wav_files = list(input_folder_path.glob('*.wav'))
 
@@ -65,6 +51,7 @@ def main():
     processed_count = 0
     success_count = 0
     error_count = 0
+    skipped_count = 0 # New counter for skipped files
 
     # --- Construct the caffeinate command wrapper ---
     # This ensures caffeinate is active for the entire duration of the script's core logic
@@ -73,42 +60,46 @@ def main():
     # --- Loop through WAV files and process them ---
     for i, input_wav_file_path in enumerate(wav_files):
         processed_count += 1
-        print(f"\n--- Processing file {processed_count}/{total_files}: {input_wav_file_path.name} ---")
+        print(f"\n--- Checking file {processed_count}/{total_files}: {input_wav_file_path.name} ---")
 
-        # --- Determine output file base name (within the current batch's output directory) ---
-        output_file_base = current_batch_output_dir / input_wav_file_path.stem
+        # --- Determine output file path and check if it already exists ---
+        output_file_base = transcripts_output_dir / input_wav_file_path.stem
+        output_txt_file = Path(f"{output_file_base}.txt")
+
+        # *** NEW: Check if the transcript already exists ***
+        if output_txt_file.exists():
+            print(f"Transcript already exists at: {output_txt_file}")
+            print("Skipping transcription.")
+            skipped_count += 1
+            continue # Move to the next file
 
         # --- Construct the whisper.cpp command ---
+        print(f"Transcript does not exist. Starting transcription...")
         whisper_command = [
             str(whisper_cpp_executable),
             "-m", str(model_path),
             "-l", "auto",
-            "-otxt",
-            "-pp",  # Print progress
+            "-otxt", # We only need the .txt output
+            "-pp",   # Print progress
             "-t", num_threads,
             "-p", num_processors,
             "-f", str(input_wav_file_path),
-            "-of", str(output_file_base)
+            "-of", str(output_file_base) # Pass the base name for output
         ]
 
         # Combine caffeinate with the whisper command
-        # This will run caffeinate, which then executes the whisper_command.
-        # Caffeinate will keep the system awake as long as whisper_command is running.
         full_command = caffeinate_command + whisper_command
 
-        print(f"Output text file will be: {output_file_base}.txt")
+        print(f"Output text file will be: {output_txt_file}")
         print(f"Using {num_threads} threads and {num_processors} processors.")
         print("-" * 30)
 
         try:
             # Use subprocess.run with the full command
-            process = subprocess.run(full_command, check=True, text=True, capture_output=True) # capture_output to see stdout/stderr if needed
-            # print(f"whisper.cpp stdout:\n{process.stdout}") # Uncomment for debugging whisper output
-            # if process.stderr: # Uncomment for debugging whisper errors
-            #     print(f"whisper.cpp stderr:\n{process.stderr}")
+            process = subprocess.run(full_command, check=True, text=True, capture_output=True)
             print("-" * 30)
             print(f"Transcription successful for: {input_wav_file_path.name}")
-            print(f"Transcription saved to: {output_file_base}.txt")
+            print(f"Transcription saved to: {output_txt_file}")
             success_count += 1
 
         except subprocess.CalledProcessError as e:
@@ -118,7 +109,6 @@ def main():
             print(f"Return code: {e.returncode}")
             print(f"whisper.cpp stdout:\n{e.stdout}")
             print(f"whisper.cpp stderr:\n{e.stderr}")
-            print("Error messages from whisper.cpp should have been printed above.")
         except FileNotFoundError:
             error_count += 1
             print(f"Critical Error: The whisper.cpp executable or caffeinate command was not found.")
@@ -132,8 +122,9 @@ def main():
     print("\n--- Batch Processing Summary ---")
     print(f"Total files found: {total_files}")
     print(f"Successfully transcribed: {success_count}")
+    print(f"Skipped (already exist): {skipped_count}") # Updated summary
     print(f"Failed to transcribe: {error_count}")
-    print(f"Transcripts for this batch are located in: {current_batch_output_dir}")
+    print(f"All transcripts are located in: {transcripts_output_dir}")
 
 if __name__ == "__main__":
     main()

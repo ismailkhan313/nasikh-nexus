@@ -11,7 +11,7 @@ function sanitizeFilename(name) {
 		.substring(0, 100);
 }
 
-const BOOK_ID = 313;
+const BOOK_ID = 8246;
 
 async function downloadBookByChapter(bookId) {
 	try {

@@ -1,7 +1,7 @@
 import { getBookInfo, getPage } from 'turath-sdk';
 import { writeFile } from 'fs/promises';
 
-const BOOK_ID = 12836;
+const BOOK_ID = 8246;
 
 async function downloadBook(bookId) {
 	try {

@@ -10,7 +10,7 @@ whisper_cpp_executable = "/Users/viz1er/Codebase/whisper.cpp/main"
 model_path = "/Users/viz1er/Codebase/whisper.cpp/models/ggml-large-v3-turbo.bin"
 # This is now the single, consistent directory for all transcripts
 transcripts_output_dir = Path(
-    "/Users/viz1er/Codebase/obsidian-vault/05 Projects/Nasikh Nexus - OCR and Audio Transcription Automation/Transcriptions/Completed"
+    "/Users/viz1er/Codebase/obsidian-vault/05 Projects/Nasikh Nexus - Transcription Automation/Transcriptions/Completed"
 )
 
 # --- Thread and Processor Configuration ---

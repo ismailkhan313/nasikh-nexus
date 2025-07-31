@@ -4,7 +4,9 @@ With yt-dlp and aria2c installed the below command is what is used in terminal t
 
 The script dl-yt-audio.py does the same thing but reads from youtube-urls.txt when a youtube playlist doesn't exist and I have to recreate it. Otherwise use the above command.
 
-`yt-dlp --downloader aria2c --downloader-args "aria2c:-x16 -s16 -k1M" -x --audio-format mp3 https://youtu.be/_DBxxJJJJR0?list=PLn3BBa1B7JxAqftZiq2M5WE6Q8KBQgjHb`
+If you want to get the video at the best quality as well use this command:
+
+`yt-dlp --downloader aria2c --downloader-args 'aria2c:-x16 -s16 -k1M' -f 'bestvideo[height<=720]+bestaudio/best[height<=720]' [URL_HERE]`
 
 ## How to Check Available Transcripts Before Downloading
 

@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup  # Used to parse HTML and find the login token
 
 # --- CONFIGURATION ---
 # Set the path where the downloaded videos will be saved.
-OUTPUT_DIRECTORY = "/Users/viz1er/Documents/audio-lectures/WISE UNIVERSITY HANAFI FIQH BA /jurisprudence-of-worship"
+OUTPUT_DIRECTORY = "/Users/viz1er/Documents/audio-lectures/WISE UNIVERSITY HANAFI FIQH BA /intro-to-hanafi-fiqh"
 
 
 # --- MOODLE LOGIN CREDENTIALS ---

@@ -8,7 +8,7 @@ import argparse
 from pathlib import Path
 
 # Define supported file extensions for easier management
-SUPPORTED_EXTENSIONS = (".mp3", ".m4a", ".mp4")
+SUPPORTED_EXTENSIONS = (".mp3", ".m4a", ".mp4", ".opus")
 
 
 def check_ffmpeg():

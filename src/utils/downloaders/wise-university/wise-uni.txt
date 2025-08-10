@@ -1,107 +1,22 @@
 {
-    "1": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2708/mod_scorm/content/1/story_content/video_6LLMicUU6Fk_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2708/mod_scorm/content/1/story_content/video_6V5AgBFksuI_18_56_676x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2708/mod_scorm/content/1/story_content/video_6SGpE2TMlms_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2708/mod_scorm/content/1/story_content/video_69rDLFqYtNK_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2708/mod_scorm/content/1/story_content/video_6ZhZLyiDAaN_18_56_682x392.mp4"
+    "88": [
+        "https://online.wise.edu.jo/english/pluginfile.php/2731/mod_scorm/content/1/story_content/video_5h9GK9Ud3lc_18_56_682x392.mp4"
     ],
-    "2": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2709/mod_scorm/content/1/story_content/video_6N6phTxPxAF_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2709/mod_scorm/content/1/story_content/video_6RoVqr2lKmE_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2709/mod_scorm/content/1/story_content/video_68ayBr8VL7C_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2709/mod_scorm/content/1/story_content/video_6LBlwYR7LlN_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2709/mod_scorm/content/1/story_content/video_5mwSEoVObtJ_18_56_682x392.mp4"
+    "99": [
+        "https://online.wise.edu.jo/english/pluginfile.php/2732/mod_scorm/content/1/story_content/video_5XHq7AcyQHV_18_56_682x392.mp4",
+        "https://online.wise.edu.jo/english/pluginfile.php/2732/mod_scorm/content/1/story_content/video_6aPtosgwZzW_18_56_682x392.mp4"
     ],
-    "3": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2710/mod_scorm/content/1/story_content/video_6PxMcop9zQO_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2710/mod_scorm/content/1/story_content/video_6UUK8q6fpDE_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2710/mod_scorm/content/1/story_content/video_6KwTWEmMlaX_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2710/mod_scorm/content/1/story_content/video_6bX5b7rPOsf_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2710/mod_scorm/content/1/story_content/video_6Ei6rkonSE4_18_56_682x392.mp4"
+    "100": [
+        "https://online.wise.edu.jo/english/pluginfile.php/2733/mod_scorm/content/1/story_content/video_6LMKIvDbUpW_18_56_682x392.mp4"
     ],
-    "4": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2711/mod_scorm/content/1/story_content/video_5WtkYAQBY53_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2711/mod_scorm/content/1/story_content/video_6K3y0sy3NnX_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2711/mod_scorm/content/1/story_content/video_5ceCfijkbZd_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2711/mod_scorm/content/1/story_content/video_6pP4TepvMaO_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2711/mod_scorm/content/1/story_content/video_6VQO4w5cRHz_18_56_682x392.mp4"
+    "110": [
+        "https://online.wise.edu.jo/english/pluginfile.php/2734/mod_scorm/content/1/story_content/video_6e9wRW99osM_18_56_682x392.mp4"
     ],
-    "5": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2712/mod_scorm/content/1/story_content/video_6d9Fk9ALepr_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2712/mod_scorm/content/1/story_content/video_6N2xQRhHVFR_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2712/mod_scorm/content/1/story_content/video_6RTMD8K5EfF_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2712/mod_scorm/content/1/story_content/video_6G6dsxyX8G6_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2712/mod_scorm/content/1/story_content/video_5cCRosiyHAg_18_56_682x392.mp4"
+    "130": [
+        "https://online.wise.edu.jo/english/pluginfile.php/2736/mod_scorm/content/1/story_content/video_5tAbTK14h35_18_56_682x392.mp4"
     ],
-    "6": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2713/mod_scorm/content/1/story_content/video_6jo8wWwXNjB_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2713/mod_scorm/content/1/story_content/video_666NUqXcYmd_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2713/mod_scorm/content/1/story_content/video_6fkzWLHvXtB_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2713/mod_scorm/content/1/story_content/video_5hKqswklenV_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2713/mod_scorm/content/1/story_content/video_62LTqm79gCU_18_56_682x392.mp4"
-    ],
-    "7": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2714/mod_scorm/content/1/story_content/video_5m55Ek1rLsY_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2714/mod_scorm/content/1/story_content/video_5vV4BGP3kYD_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2714/mod_scorm/content/1/story_content/video_5xIUiBUVuXu_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2714/mod_scorm/content/1/story_content/video_5qB9YoQ0XvI_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2714/mod_scorm/content/1/story_content/video_6eOWpUPldLt_18_56_682x392.mp4"
-    ],
-    "8": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2715/mod_scorm/content/1/story_content/video_6YyiyiwP407_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2715/mod_scorm/content/1/story_content/video_6ILu8vPzEuz_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2715/mod_scorm/content/1/story_content/video_6K14hT1uPT4_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2715/mod_scorm/content/1/story_content/video_6S6X0S5cmPm_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2715/mod_scorm/content/1/story_content/video_5okMyqPrHvL_18_56_682x392.mp4"
-    ],
-    "9": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2716/mod_scorm/content/1/story_content/video_5lr8FBrN0OQ_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2716/mod_scorm/content/1/story_content/video_5Z1JCWKRQi7_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2716/mod_scorm/content/1/story_content/video_5ionMLP26av_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2716/mod_scorm/content/1/story_content/video_5vu9JpUcooJ_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2716/mod_scorm/content/1/story_content/video_6PDtjsTYawz_18_56_682x392.mp4"
-    ],
-    "10": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2717/mod_scorm/content/1/story_content/video_5ZUKEDdFsKm_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2717/mod_scorm/content/1/story_content/video_6788zPfYiMG_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2717/mod_scorm/content/1/story_content/video_5qpkRT2yHUv_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2717/mod_scorm/content/1/story_content/video_6kKMnFyozAh_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2717/mod_scorm/content/1/story_content/video_67RvEbf0oTq_18_56_682x392.mp4"
-    ],
-    "11": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2718/mod_scorm/content/1/story_content/video_5hbhoyexnbG_18_56_694x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2718/mod_scorm/content/1/story_content/video_5h6JSffE2kV_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2718/mod_scorm/content/1/story_content/video_6BxvF6KPtyu_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2718/mod_scorm/content/1/story_content/video_6AnfdjCktNv_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2718/mod_scorm/content/1/story_content/video_5c0IVJVdRs0_18_56_682x392.mp4"
-    ],
-    "12": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2719/mod_scorm/content/1/story_content/video_6Rccv2ufoFT_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2719/mod_scorm/content/1/story_content/video_6TIi8W1aMEN_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2719/mod_scorm/content/1/story_content/video_6QZ3etgQGkw_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2719/mod_scorm/content/1/story_content/video_5Zvh1L0JZaO_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2719/mod_scorm/content/1/story_content/video_6hBJdxECFn7_18_56_682x392.mp4"
-    ],
-    "13": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2720/mod_scorm/content/1/story_content/video_6TxRftUDul5_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2720/mod_scorm/content/1/story_content/video_6AVColipZJT_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2720/mod_scorm/content/1/story_content/video_5ppYRWiICn2_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2720/mod_scorm/content/1/story_content/video_5VfKwHEHSC0_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2720/mod_scorm/content/1/story_content/video_5Ynbxux1cg1_18_56_682x392.mp4"
-    ],
-    "14": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2721/mod_scorm/content/1/story_content/video_6p8PzVJdscL_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2721/mod_scorm/content/1/story_content/video_6F9TDWhFJBH_18_56_690x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2721/mod_scorm/content/1/story_content/video_6abSETgcGWa_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2721/mod_scorm/content/1/story_content/video_5Z0DQyne7BA_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2721/mod_scorm/content/1/story_content/video_5sGWppEIdgB_18_56_682x392.mp4"
-    ],
-    "15": [
-        "https://online.wise.edu.jo/english/pluginfile.php/2722/mod_scorm/content/1/story_content/video_63ok0QzgT6h_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2722/mod_scorm/content/1/story_content/video_6Zt5cJ4qIVG_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2722/mod_scorm/content/1/story_content/video_6XhaVAZssfb_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2722/mod_scorm/content/1/story_content/video_6roZgvBd23Z_18_56_682x392.mp4",
-        "https://online.wise.edu.jo/english/pluginfile.php/2722/mod_scorm/content/1/story_content/video_6DfCEqkkxFq_18_56_682x392.mp4"
+    "140": [
+        "https://online.wise.edu.jo/english/pluginfile.php/2737/mod_scorm/content/1/story_content/video_66NP2pPWV54_18_56_682x392.mp4",
+        "https://online.wise.edu.jo/english/pluginfile.php/2737/mod_scorm/content/1/story_content/video_6b078LtwUEO_18_56_682x392.mp4"
     ]
 }
